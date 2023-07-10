@@ -106,7 +106,7 @@
             <div class="row bg-info mt-5">
                         <h3 class="text-center">Want an offer?</h3>
                     <div class="col-12 col-sm-8 col-xxl-6 mx-auto px/5">
-                        <form class="row g-3 mb-3">
+                        <form class="row g-3 mb-3" onsubmit="estimateOffer(event)">
                             
                             <!--first-name-->
                             <div class="col-12 col-sm-6">
@@ -133,9 +133,9 @@
                                 <label for="inputWork" class="form-label">Type of work</label>
                                 <select class="form-select" id="inputWork">
                                     <option selected>Select the type of work</option>
-                                    <option>Project Analysis</option>
-                                    <option>Front-end Development</option>
-                                    <option>Back-end Development</option>
+                                    <option value="1">Project Analysis</option>
+                                    <option value="2">Front-end Development</option>
+                                    <option value="3">Back-end Development</option>
                                 </select>
                             </div>
                             <!--discount-->
@@ -150,9 +150,13 @@
                             </div>
                             <!--submit-->
                             <div class="col-12 text-center">
-                                <button type="submit" class="btn btn-warning">Send</button>
+                                <button type="submit" id="submitButton" class="btn btn-warning">Send</button>
                             </div>
-                                
+                             <!--price-->
+                            <div class="col-12">
+                                <h3 id="price"> </h3>
+                            </div>
+
                         </form>
                     </div>
             </div>
